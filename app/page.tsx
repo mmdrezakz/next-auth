@@ -29,7 +29,7 @@ export default function HomePage() {
     <div className="bg-gray-100 p-8 min-h-screen">
       <div className="mx-auto max-w-4xl">
         <div className="bg-white shadow-md p-6 rounded-lg">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex justify-between items-center mb-6 text-black">
             <h1 className="font-bold text-3xl">Welcome!</h1>
             <button
               onClick={() => signOut()}
