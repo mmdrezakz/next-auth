@@ -30,24 +30,24 @@ export default function HomePage() {
       <div className="mx-auto max-w-4xl">
         <div className="bg-white shadow-md p-6 rounded-lg">
           <div className="flex justify-between items-center mb-6 text-black">
-            <h1 className="font-bold text-3xl">Welcome!</h1>
+            <h1 className="font-bold text-black text-3xl">Welcome!</h1>
             <button
               onClick={() => signOut()}
-              className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white"
+              className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-black"
             >
               Sign Out
             </button>
           </div>
 
-          <div className="pt-6 border-t">
+          <div className="pt-6 border-t text-black">
             <h2 className="mb-4 font-semibold text-xl">Your GitHub Info:</h2>
             
 
             
-            <p className="mb-2 text-lg">
+            <p className="mb-2 text-black text-lg">
               <strong>Name:</strong> {session?.user?.name || "N/A"}
             </p>
-            <p className="text-lg">
+            <p className="text-black text-lg">
               <strong>Email:</strong> {session?.user?.email || "N/A"}
             </p>
           </div>
