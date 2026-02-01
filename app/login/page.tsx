@@ -3,27 +3,28 @@ import { signIn } from 'next-auth/react'
 import React, { useState } from 'react'
 
 export default function LoginPage() {
-   const [isLoading, setIsLoading] = useState(false)
+   const [isLoadingGoogle, setIsLoadingGoogle] = useState(false)
+   const [isLoadingGithub, setIsLoadingGithub] = useState(false)
 
   const handleGoogleLogin = async () => {
-    setIsLoading(true)
+    setIsLoadingGoogle(true)
     console.log("Google button clicked!") // این خط رو اضافه کن
     await signIn("google", { 
       callbackUrl: "/",
     })
 
-    setIsLoading(false)
+    setIsLoadingGoogle(false)
 
   }
 
   const handleGitHubLogin = async () => {
-    setIsLoading(true)
+    setIsLoadingGithub(true)
 
     console.log("GitHub button clicked!") // این خط رو اضافه کن
     await signIn("github", { 
       callbackUrl: "/",
     })
-    setIsLoading(false)
+    setIsLoadingGithub(false)
 
   }
 
@@ -35,10 +36,10 @@ export default function LoginPage() {
           <button 
             onClick={handleGitHubLogin}
             
-            disabled={isLoading}
+            disabled={isLoadingGithub}
             className="bg-black hover:bg-gray-800 disabled:opacity-50 px-6 py-3 rounded-lg w-full text-white"
           >
-            {isLoading ? "Loading...":"Login with GitHub"}
+            {isLoadingGithub ? "Loading...":"Login with GitHub"}
           </button>
                     <button 
                     disabled={isLoading}
@@ -46,7 +47,7 @@ export default function LoginPage() {
             className="flex justify-center items-center gap-3 bg-white hover:bg-gray-50 py-3 border border-gray-300 rounded-lg w-full font-medium text-gray-700"
           >
             
-            {isLoading ? "Loading...":"Continue with Google"}
+            {isLoadingGoogle ? "Loading...":"Continue with Google"}
             
           </button>
         </form>

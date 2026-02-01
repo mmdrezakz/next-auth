@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
 
           <div className="pt-6 border-t text-black">
-            <h2 className="mb-4 font-semibold text-xl">Your GitHub Info:</h2>
+            <h2 className="mb-4 font-semibold text-xl">Your  Info:</h2>
             
 
             
