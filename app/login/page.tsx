@@ -11,6 +11,9 @@ export default function LoginPage() {
       await signIn("github", { 
         callbackUrl: "/"  // بعد از لاگین به کجا بره
       })
+      await signIn("google",{
+        callbackUrl: "/"  // بعد از لاگین به کجا بره
+      })
     } catch (error) {
       console.error("Login error:", error)
       setIsLoading(false)

@@ -6,6 +6,10 @@ import GoogleProvider  from "next-auth/providers/google";
 console.log("GITHUB_ID exists:", !!process.env.GITHUB_ID);
 console.log("GITHUB_ID value:", process.env.GITHUB_ID ? "SET" : "NOT SET");
 console.log("GITHUB_SECRET exists:", !!process.env.GITHUB_SECRET);
+console.log("GITHUB_SECRET value:", process.env.GITHUB_SECRET ? "SET" : "NOT SET");
+console.log("GOOGLE_ID exists:", !!process.env.GOOGLE_ID);
+console.log("GOOGLE_SECRET exists:", !!process.env.GOOGLE_SECRET);
+
 const handler = NextAuth({
     providers:[
         GitHubProvider({
