@@ -29,6 +29,13 @@ export default function LoginPage() {
           >
             {isLoading ? "Redirecting to GitHub..." : "Login with GitHub"}
           </button>
+                    <button 
+            onClick={() => signIn("google")}
+            className="flex justify-center items-center gap-3 bg-white hover:bg-gray-50 py-3 border border-gray-300 rounded-lg w-full font-medium text-gray-700"
+          >
+            
+            Continue with Google
+          </button>
         </form>
         <p className="mt-4 text-gray-600 text-sm text-center">
           You will be redirected to GitHub for authentication
