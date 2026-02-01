@@ -10,7 +10,6 @@ export default function LoginPage() {
     console.log("Google button clicked!") // این خط رو اضافه کن
     await signIn("google", { 
       callbackUrl: "/",
-      redirect: true 
     })
 
 
@@ -22,7 +21,6 @@ export default function LoginPage() {
     console.log("GitHub button clicked!") // این خط رو اضافه کن
     await signIn("github", { 
       callbackUrl: "/",
-      redirect: true 
     })
 
   }
