@@ -42,7 +42,7 @@ export default function LoginPage() {
             {isLoadingGithub ? "Loading...":"Login with GitHub"}
           </button>
                     <button 
-                    disabled={isLoading}
+                    disabled={isLoadingGoogle}
             onClick={handleGoogleLogin}
             className="flex justify-center items-center gap-3 bg-white hover:bg-gray-50 py-3 border border-gray-300 rounded-lg w-full font-medium text-gray-700"
           >
